@@ -1,0 +1,315 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #f8faf9;
+  color: #173047;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid #36a889;
+  outline-offset: 4px;
+}
+
+.container {
+  width: min(90%, 1100px);
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background-color: #10283c;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Flexbox places the brand and navigation on one row. */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 82px;
+}
+
+.brand {
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.brand span {
+  color: #a9efda;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.navigation a {
+  color: #e1edeb;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  color: #a9efda;
+}
+
+/* Hero */
+.hero {
+  overflow: hidden;
+  background-color: #10283c;
+  color: #ffffff;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  min-height: 550px;
+  padding: 80px 0;
+}
+
+.hero-text {
+  max-width: 670px;
+}
+
+.eyebrow {
+  margin: 0 0 22px;
+  color: #a9efda;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 5.3rem);
+  letter-spacing: -3px;
+  line-height: 1.1;
+}
+
+.hero h1 span {
+  color: #a9efda;
+}
+
+.hero-description {
+  max-width: 550px;
+  margin: 25px 0 32px;
+  color: #d4e2e3;
+  font-size: 1.15rem;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 13px 18px;
+  background-color: #a9efda;
+  color: #10283c;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.primary-button:hover {
+  background-color: #cef8eb;
+}
+
+.hero-monogram {
+  display: flex;
+  flex: 0 0 240px;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 240px;
+  border: 1px solid #a9efda;
+  border-radius: 50%;
+  color: #a9efda;
+  font-size: 5.5rem;
+  font-weight: 800;
+  letter-spacing: -12px;
+}
+
+/* Shared section styles */
+.section {
+  padding: 95px 0;
+}
+
+.section-label {
+  margin: 0 0 15px;
+  color: #267b69;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  letter-spacing: -2px;
+  line-height: 1.15;
+}
+
+/* About */
+.about-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.about-layout > * {
+  flex: 1;
+}
+
+.about-content {
+  color: #526879;
+  font-size: 1.1rem;
+}
+
+.about-content p {
+  margin: 0 0 20px;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills */
+.skills-section {
+  background-color: #eaf2ef;
+}
+
+.section-description {
+  margin: 18px 0 0;
+  color: #526879;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 38px;
+}
+
+.skill-card {
+  flex: 1 1 250px;
+  min-height: 245px;
+  padding: 28px;
+  border-top: 4px solid #10283c;
+  background-color: #ffffff;
+}
+
+.card-number {
+  color: #267b69;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.skill-card h3 {
+  margin: 35px 0 12px;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.skill-card p {
+  margin: 0;
+  color: #526879;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #0a1d2e;
+  color: #d4e2e3;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 90px;
+  font-size: 0.9rem;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-content a {
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  color: #a9efda;
+}
+
+/* Tablet and mobile layouts */
+@media (max-width: 800px) {
+  .hero-monogram {
+    display: none;
+  }
+
+  .hero-content {
+    min-height: auto;
+  }
+
+  .about-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 0;
+  }
+
+  .navigation {
+    gap: 18px;
+  }
+
+  .hero-content {
+    padding: 75px 0;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+
+  .footer-content {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 24px 0;
+  }
+}
